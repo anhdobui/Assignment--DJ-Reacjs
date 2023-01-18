@@ -1,0 +1,17 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    height: max-content;
+
+    padding: 0 12px;
+    color: #333;
+    font-size: 27px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:hover {
+        color: var(--primary);
+    }
+}

@@ -1,0 +1,12 @@
+.container{
+    max-width:1350px;
+    width:100%;
+    display:block;
+    margin:0 auto;
+}
+.layout-grid{
+    display:grid;
+    grid-template-columns: 59.62% 40.37%;
+    overflow: hidden;
+
+}

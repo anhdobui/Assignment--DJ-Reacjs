@@ -1,0 +1,205 @@
+.wrapper {
+    padding: 40px;
+}
+.container {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: background 0.3s ease, border-color 0.3s ease,
+        box-shadow 0.3s ease, outline 0.3s ease;
+    &:hover {
+        outline: 1px #f2f2f2;
+        box-shadow: 0 0 25px 0 rgb(0 0 0 / 15%);
+
+        .size-product {
+            opacity: 1;
+        }
+    }
+}
+.content {
+    position: relative;
+}
+
+.panel-top {
+    .list_discount{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        display: inline-flex;
+        flex-direction: column;
+    }
+    .discount {
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+        background: #c20000;
+        padding: 10px;
+        line-height: 20px;
+        width:max-content;
+        &.sale_label{
+            background: #984fa6;
+            text-transform: uppercase
+        }
+    }
+    
+    .discount + .discount{
+        margin-top:10px;
+    }
+    .like {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: transparent;
+        color: var(--black);
+        font-size: 24px;
+        line-height: 24px;
+        cursor: pointer;
+        z-index: 20;
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+}
+.panel-body {
+    position: relative;
+    padding-bottom: 55px;
+    margin-bottom: 10px;
+}
+.thumb-product {
+    max-width: 238px;
+    .img-flip {
+        display: none;
+    }
+    &:hover {
+        .img-flip {
+            display: block;
+        }
+        .img-face {
+            display: none;
+        }
+    }
+}
+.list-color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-1-5 {
+    flex: 0 0 25%;
+}
+
+// size
+.size-product {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 15;
+    opacity: 0;
+    transition: all 0.2s ease;
+
+    .list-size {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 256px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        > * {
+            flex: 0 0 34px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 26px;
+            text-align: center;
+            color: var(--black);
+            cursor: pointer;
+            &.disable {
+                opacity: 0.5;
+                cursor: default;
+            }
+
+            &.size-current {
+                color: var(--primary);
+            }
+            &:hover:not(.disable) {
+                color: var(--primary);
+            }
+        }
+    }
+}
+//
+
+.panel-foot {
+    padding: 10px 5px;
+
+    .info {
+        padding: 0px 5px;
+        position: relative;
+    }
+}
+.name {
+    width: calc(100% - 60px);
+    height: 40px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    > span {
+        color: #2e2323;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+.price {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: none;
+    font-style: none;
+    color: #000;
+    .sale {
+        color: #c20000;
+    }
+    .sale ~ .old-price {
+        font-weight: 400;
+        text-decoration: line-through;
+    }
+    > span + span {
+        margin-left: 15px;
+    }
+}
+// btn-buy
+.btn-buy {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+    background: var(--black);
+    cursor: pointer;
+    .icon-bag {
+        color: var(--while);
+    }
+    &:hover:not(.btn-disable) {
+        background: var(--primary);
+    }
+    &.btn-disable {
+        opacity: 1;
+        background: #ddd !important;
+        border: #ddd !important;
+        cursor: not-allowed;
+    }
+}

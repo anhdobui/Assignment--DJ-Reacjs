@@ -1,0 +1,33 @@
+.wrapper {
+    display: block;
+    padding: 16px 15px 0px 15px;
+    border-top: 0.75px solid #6a6a6a;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(86px, auto);
+}
+.logo {
+    width: 120px;
+    height: 47px;
+    object-fit: scale-down;
+}
+.text {
+    color: #6a6a6a;
+    font-size: 16px;
+    line-height: 24px;
+}
+.app {
+    padding-left: 16px;
+    display: flex;
+}
+.btn-app {
+    display: flex;
+    width: 110px;
+    height: 37px;
+    object-fit: scale-down;
+}
+.btn-app + .btn-app {
+    margin-left: 10px;
+}

@@ -1,0 +1,25 @@
+.container{
+    display: block;
+    width:100%;
+    max-width:100%;
+    margin: 0 auto;
+}
+.table{
+    width:100%;
+    >tbody >tr{
+        >td{
+            display:inline-block;
+            max-width:50%;
+            width:50%;
+            padding:8px 0;
+        }
+        >td:not(:last-child){
+            font-weight:700;
+        }
+    }
+    >tbody >tr:not(:last-child){
+        display: block;
+        margin-bottom:8px;
+        border-bottom: 1px solid #a0a0a040;
+    }
+}

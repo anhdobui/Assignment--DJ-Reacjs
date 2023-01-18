@@ -1,0 +1,99 @@
+.wrapper{
+    padding:0 15px;
+}
+
+.panel{
+    margin-bottom: 1rem;
+}
+.panel + .panel{
+    padding-top: 1rem;
+    border-top: 1px solid rgba(160,160,160,.25);
+}
+.title{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    >span{
+        color:#2e2323;
+        font-size:38px;
+        line-height:46px;
+        font-style:normal;
+        font-weight:700;
+    }
+    .btn-like{
+        background-color: transparent;
+        font-size:24px;
+        padding:16px 0;
+        cursor: pointer;
+        &:hover {
+            color: var(--primary);
+        }
+
+    }
+}
+.name{
+    color:#6a6a6a;
+    font-size:1rem;
+    font-weight:400;
+    margin-bottom:16px;
+    line-height: 19px;
+    padding-top:5px;
+}
+.product-reference{
+    margin-bottom:19px;
+    >label{
+        margin-right:8px;
+    }
+}
+.price{
+    display:flex;
+    flex-direction: column;
+
+    .price-apply{
+        font-size:33px;
+        font-weight:700;
+        line-height:33px;
+        color:var(--black);
+    }
+    .tax-shipping{
+        color:#2e2323;
+        font-size:1rem;
+        line-height:24px;
+        margin-bottom:2px;
+    }
+    .product-discount{
+        .regular-price{
+            font-size:16px;
+            color:#c20000;
+            text-decoration: line-through;
+            padding:0 3px;
+            margin-right:2px;
+            
+        }
+        .discount-percentage{
+            display: inline-block;
+            padding: 0.25em 0.4em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0;
+
+            background: #c20000;
+            color: #fff;
+            position: relative;
+
+            vertical-align: text-top;
+            margin-top:-1px;
+        }
+    }
+}
+
+.same-product{
+    margin: 0 20px;
+}
+.add-basket{
+    padding-top:16px;
+}

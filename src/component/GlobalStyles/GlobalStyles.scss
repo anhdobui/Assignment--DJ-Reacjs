@@ -1,0 +1,122 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+/* ################################ Reset ############################################################ */
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    min-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-size: 100%;
+    line-height: 1.15;
+
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #000;
+    }
+}
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    transition: opacity 0.2s cubic-bezier(0.7, 0, 0.3, 1),
+        color 0.2s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+input,
+button,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+/* ##################################################### */
+:root {
+    --text-color: #333;
+    --primary: #014ba0;
+    --tertiary_color: #4c4c4c;
+    --danger_color: #de4646;
+    /* ##################################################### */
+    --while: #fff;
+    --black: #000;
+    /* ##################################################### */
+    --height-header: 60px;
+}
+
+/* ################### Thumb-ratio ############### */
+.thumb-ratio {
+    position: relative;
+    padding-top: 100%;
+}
+
+.thumb-ratio > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.thumb_ratio.style-43 {
+    padding-top: 75%;
+    /*ratio 4:3*/
+}
+
+.thumb_ratio.style-34 {
+    padding-top: 133.33%;
+    /*ratio 3:4*/
+}
+
+.thumb_ratio.style-21 {
+    padding-top: 50%;
+    /*ratio 2:1*/
+}
+
+.thumb_ratio.style-11 {
+    padding-top: 100%;
+    /*ratio 1:1*/
+}
+
+.thumb_ratio.style-slide {
+    padding-top: 31.25%;
+    /*ratio 16:5*/
+}
+
+/* ######################################################## */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
