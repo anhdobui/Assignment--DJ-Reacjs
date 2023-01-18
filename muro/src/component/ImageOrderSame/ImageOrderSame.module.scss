@@ -1,0 +1,11 @@
+.container{
+    display:block;
+    width:100%;
+    overflow: hidden;
+}
+.list{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}

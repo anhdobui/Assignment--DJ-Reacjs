@@ -1,0 +1,51 @@
+.title{
+    padding:10px 0;
+    border-bottom: 1px solid rgba(160,160,160,.25);
+    >button{
+        background-color: transparent;
+        text-align: left ;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: none;
+        line-height:24px;
+        width:100%;
+        display: block;
+        position:relative;
+        cursor: pointer;
+        &:hover{
+            color: var(--primary);
+            font-style: italic;
+        }
+        .icon{
+            position:absolute;
+            top:50%;
+            right:0;
+            transform: translateY(-50%);
+            opacity: 0;
+            visibility: hidden;
+        }
+        .icon-dow{
+            opacity: 1;
+            visibility: visible;
+            &.isDrop{
+                opacity: 0;
+                visibility: hidden;
+
+                + .icon{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        
+    }
+}
+
+.content{
+    padding:16px 0;
+    border-bottom: 1px solid rgba(160,160,160,.25);
+    &.hidden{
+        display:none
+    }
+}

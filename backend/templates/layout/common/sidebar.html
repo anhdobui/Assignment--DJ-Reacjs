@@ -1,0 +1,64 @@
+{% load static %}
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <span>
+                        <img alt="image" class="img-circle" src="{% static 'img/p3.jpg' %}" style="width:45px;height:45px;"/>
+                    </span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                            <span class="block m-t-xs"> <strong class="font-bold">Nhóm 22</strong> </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="mailbox.html">Mailbox</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+            </li>
+            {% url 'dashboard' as dashboard %}
+            {% url 'user' as user %}
+            {% url 'groupUser' as groupUser %}
+            {% comment %} ------------------------------------------------------- {% endcomment %}
+            {% url 'product' as product %}
+            {% comment %} --------------------------------------------------------- {% endcomment %}
+            {% url 'productCatalogue' as productCatalogue %}
+            {% url 'productCatalogueCreate' as productCatalogueCreate %}
+            {% url 'productCatalogueUpdate' as productCatalogueUpdate %}
+            {% url 'productCatalogueDelete' as productCatalogueDelete %}
+            {% comment %} -------------------------------------------------------------- {% endcomment %}
+            {% comment %} --------------------------------------------------------- {% endcomment %}
+            {% url 'productBranch' as productBranch %}
+            {% url 'productBranchCreate' as productBranchCreate %}
+            {% url 'productBranchUpdate' as productBranchUpdate %}
+            {% url 'productBranchDelete' as productBranchDelete %}
+            {% comment %} -------------------------------------------------------------- {% endcomment %}
+            <li class="{% if request.path == dashboard %}active{% endif %}">
+                <a href="{{dashboard}}"><i class="fa fa-th-large"></i><span class="nav-label">Dashboards</span></a>
+            </li>
+            {% comment %} <li class="{% if request.path == user %}active{% endif %}">
+                <a href="{{user}}"><i class="fa fa-diamond"></i> <span class="nav-label">Thành viên</span></a>
+            </li>
+            <li class="{% if request.path == groupUser %}active{% endif %}">
+                <a href="{{groupUser}}"><i class="fa fa-diamond"></i> <span class="nav-label">Nhóm thành viên</span></a>
+            </li> {% endcomment %}
+            <li class="{% if request.path == product %}active{% endif %}">
+                <a href="{{product}}"><i class="fa fa-diamond"></i> <span class="nav-label">Sản phẩm</span></a>
+            </li>
+            <li class="{% if request.path == productBranch or request.path == productBranchCreate %}active{% endif %}">
+                <a href="{{productBranch}}"><i class="fa fa-diamond"></i> <span class="nav-label">Dòng sản phẩm</span></a>
+            </li>
+            <li class="{% if request.path == productCatalogue or request.path == productCatalogueCreate  %}active{% endif %}">
+                <a href="{% url 'productCatalogue' %}"><i class="fa fa-diamond"></i> <span class="nav-label">Nhóm sản phẩm</span></a>
+            </li> 
+        </ul>
+    </div>
+</nav>

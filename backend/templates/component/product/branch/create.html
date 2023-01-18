@@ -1,0 +1,16 @@
+{% extends '../../../layout/index.html' %}
+{% block title %}Thêm nhóm sản phẩm{% endblock title %}
+{% block content %}
+<div class="row wrapper border-bottom white-bg page-heading">
+	<div class="col-lg-10">
+		<h2>Thêm mới nhóm Sản phẩm</h2>
+		<ol class="breadcrumb">
+			<li>
+				<a href="{% url 'dashboard' %}">Home</a>
+			</li>
+			<li class="active"><strong>Thêm mới nhóm Sản phẩm</strong></li>
+		</ol>
+	</div>
+</div>
+{% include './store.html' %}
+{% endblock content %}

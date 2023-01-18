@@ -1,0 +1,17 @@
+.list-img-album{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(0px, auto);
+    row-gap: 0px;
+    >li:first-child{
+        grid-column: auto / span 2;
+        grid-row: auto/ span 2;
+    }
+    >li:nth-of-type(8){
+        grid-column: auto / span 2;
+        grid-row: auto/ span 2;
+    }
+    max-height:803px;
+    overflow-x:hidden;
+    overflow-y: overlay;
+}

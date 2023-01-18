@@ -1,0 +1,94 @@
+{% extends '../../layout/index.html' %}
+{% block title %}Quản lí thành viên{% endblock title %}
+{% block content %}
+<div class="row wrapper border-bottom white-bg page-heading ">
+    <div class="col-lg-10">
+        <h2>Quản Lý Thành Viên</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Dashboard</a>
+            </li>
+            <li class="active">
+                <strong>Quản Lý Thành Viên</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="button-group bd-mb20">
+        <a href="/create" class="btn btn-primary"><i class="fa fa-plus bd-mr5"></i>Thêm mới thành viên</a>
+    </div>
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Họ và Tên</th>
+                <th>Nhóm</th>
+                <th>Số điện thoại</th>
+                <th>Email</th>
+                <th>Địa chỉ</th>
+                <th>Giới tính</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr>
+                <td>1</td>
+                <td>Bùi Anh Độ</td>
+                <td>Full Action</td>
+                <td>0123456789</td>
+                <td>buianhdo2002@gamil.com</td>
+                <td>Thái Bình</td>
+                <td>Nam</td>
+                <td>
+                    <a href="/edit" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                    <a href="/delete" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Bùi Anh Độ</td>
+                <td>Full Action</td>
+                <td>0123456789</td>
+                <td>buianhdo2002@gamil.com</td>
+                <td>Thái Bình</td>
+                <td>Nam</td>
+                <td>
+                    <a href="/edit" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                    <a href="/delete" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Bùi Anh Độ</td>
+                <td>Full Action</td>
+                <td>0123456789</td>
+                <td>buianhdo2002@gamil.com</td>
+                <td>Thái Bình</td>
+                <td>Nam</td>
+                <td>
+                    <a href="/edit" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                    <a href="/delete" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Bùi Anh Độ</td>
+                <td>Full Action</td>
+                <td>0123456789</td>
+                <td>buianhdo2002@gamil.com</td>
+                <td>Thái Bình</td>
+                <td>Nam</td>
+                <td>
+                    <a href="/edit" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                    <a href="/delete" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+          
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

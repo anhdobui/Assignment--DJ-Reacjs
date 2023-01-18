@@ -1,0 +1,164 @@
+<form method="post" action="" class="form-horizontal box" >
+    {% csrf_token %}
+	<div class="wrapper wrapper-content animated fadeInRight">
+		<div class="row">
+            <div class="col-lg-3"></div>
+			<div class="box-body col-lg-6">
+				{% if form.errors %}
+					<div class="alert alert-danger">
+						{% for field in form %}
+							{{ field.errors }}
+						{% endfor %}
+					</div>
+				{% endif %}
+			</div>
+			<div class="col-lg-3"></div>
+		</div>
+		<div class="row">
+			<div class="col-lg-8 clearfix">
+				<div class="ibox mb30">
+					<div class="ibox-title" style="padding: 9px 15px 0px;">
+						<div class="uk-flex uk-flex-middle uk-flex-space-between">
+							<h5>Thông tin cơ bản <small class="text-danger">Điền đầy đủ các thông tin được mô tả dưới đây</small></h5>
+							<div class="ibox-tools">
+								<button type="submit" name="create" value="create" class="btn btn-primary block full-width m-b">Lưu</button>
+							</div>
+						</div>
+					</div>
+					<div class="ibox-content">
+						{{form.media}}
+						<div class="row mb15">
+							<div class="col-lg-12">
+								<div class="uk-flex uk-flex-middle uk-flex-space-between">
+									<div class="form-row wi45">
+										<label class="control-label text-left">
+											<span>Tên sản phẩm<b class="text-danger">(*)</b></span>
+										</label>
+										{{form.name}}
+										
+									</div>
+									<div class="form-row wi25">
+										<label class="control-label text-left">
+											<span>Giá sản phẩm (€) <b class="text-danger">(*)</b></span>
+										</label>
+										{{form.price}}
+										
+									</div>
+									<div class="form-row wi25">
+										<label class="control-label text-left">
+											<span>Giá sale (€)</span>
+										</label>
+										{{form.price_sale}}
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mb15">
+							<div class="col-lg-12">
+								<div class="form-row form-description">
+									<div class="uk-flex uk-flex-middle uk-flex-space-between">
+										<label class="control-label text-left">
+											<span>Mô tả ngắn</span>
+										</label>
+									</div>
+									{{form.description_short}}
+								</div>
+							</div>
+						</div>
+
+						<div class="row mb15">
+							<div class="col-lg-12">
+								<div class="form-row">
+									<div class="uk-flex uk-flex-middle uk-flex-space-between">
+										<label class="control-label text-left">
+											<span>Miêu tả chi tiết</span>
+										</label>
+									</div>
+									{{form.description_detail}}
+								</div>
+							</div>
+						</div>
+
+						<div class="row mb15">
+							<div class="col-lg-12">
+								<div class="form-row">
+									<div class="uk-flex uk-flex-middle uk-flex-space-between">
+										<label class="control-label text-left">
+											<span>Hướng dẫn bảo quản</span>
+										</label>
+									</div>
+									{{form.cleaning}}
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+            <div class="col-lg-4 ">
+
+				<div class="ibox mb20">
+					<div class="ibox-title">
+						<h5>Lựa chọn danh mục cha <b class="text-danger">(*)</b></h5>
+					</div>
+					<div class="ibox-content">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-row mb10">
+									<small class="text-danger">Dòng sản phẩm này sẽ thuộc danh mục cha </small>
+								</div>
+								<div class="form-row">
+									{{form.category}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="ibox mb20">
+					<div class="ibox-title">
+						<h5>Label</h5>
+					</div>
+					<div class="ibox-content">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-row">
+									{{form.label}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="ibox mb20">
+					<div class="ibox-title">
+						<h5>Reference</h5>
+					</div>
+					<div class="ibox-content">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-row">
+									{{form.reference}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</form>
+<div id="toast"></div>
+{% load static %}
+<script src="{% static 'js/myjs.js' %}" type="text/javascript"></script>
+<script>
+    {% for mes in messages %}
+        toast({
+            title:'Success',
+            message: "{{mes}}",
+            type:'success',
+            duration: 3000
+        })
+    {% endfor %}
+</script>

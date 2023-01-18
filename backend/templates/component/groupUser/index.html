@@ -1,0 +1,54 @@
+{% extends '../../layout/index.html' %}
+{% block title %}Quản lí nhóm thành viên{% endblock title %}
+{% block content %}
+<div class="row wrapper border-bottom white-bg page-heading ">
+    <div class="col-lg-10">
+        <h2>Quản Lý Nhóm Thành Viên</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+            </li>
+            <li class="active">
+                <strong>Quản Lý Nhóm Thành Viên</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="button-group bd-mb20">
+        <a href="" class="btn btn-primary"><i class="fa fa-plus bd-mr5"></i>Thêm mới nhóm thành viên</a>
+    </div>
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên nhóm</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>1</td>
+                <td>Full Action</td>
+                <td>
+                    <a href="" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                    <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Full Action</td>
+                <td>
+                    <a href="" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                    <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock content %}

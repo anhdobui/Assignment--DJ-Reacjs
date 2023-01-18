@@ -1,0 +1,45 @@
+.wrapper {
+    width: 100%;
+    max-width: 1536px;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+.content {
+    position: relative;
+
+    .inner-content {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        .label {
+            padding-bottom: 40px;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 20px;
+            color: #2e2323;
+        }
+        .text {
+            > p {
+                user-select: text;
+                -webkit-user-drag: none;
+                -webkit-tap-highlight-color: transparent;
+                font-size: 11pt;
+                line-height: 24px;
+                font-family: Calibri, sans-serif;
+                background-color: #ffffff;
+                color: #2e2323;
+            }
+            > p:not(:last-child) {
+                padding-bottom: 24px;
+            }
+        }
+    }
+}

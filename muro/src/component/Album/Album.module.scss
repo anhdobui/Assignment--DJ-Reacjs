@@ -1,0 +1,36 @@
+.container {
+    display: block;
+    width: 100%;
+    max-width: 1536px;
+    margin: 0 auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(433px, auto);
+    row-gap: 50px;
+}
+.widget {
+    padding: 15px;
+}
+.grid-1-4 {
+    .style-ratio {
+        padding-top: 126.1%;
+    }
+}
+.grid-2-4 {
+    grid-column: auto / span 2;
+    grid-row: auto/ span 2;
+
+    .style-ratio {
+        padding-top: 126.1%;
+    }
+}
+.grid-4-4 {
+    grid-column: auto / span 4;
+    grid-row: auto/ span 1;
+
+    .style-ratio {
+        padding-top: 38.04%;
+    }
+}

@@ -1,0 +1,30 @@
+.wrapper{
+    margin-bottom:40px;
+}
+.container{
+    max-width:1350px;
+    width:100%;
+    display: block;
+    margin:0 auto;
+}
+.title{
+    color: #2e2323;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 30px;
+    display: flex;
+    width: 100%;
+}
+.description{
+    margin-bottom:32px;
+}
+.data-edit{
+    >p+p{
+        margin-top:15px;
+    }
+    >p:last-child{
+        margin-bottom: 12px;
+    }
+}

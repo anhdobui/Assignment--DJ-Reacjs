@@ -1,0 +1,15 @@
+.wrapper {
+    background-color: #f8f8f8;
+}
+.container {
+    display: block;
+    max-width: 1380px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+}
+.header {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(240px, auto);
+}

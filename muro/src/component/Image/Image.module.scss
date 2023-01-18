@@ -1,0 +1,24 @@
+.wrapper {
+    overflow: hidden;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+div.wrapper {
+    background: transparent;
+    background-repeat: no-repeat;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+img.wrapper{
+    width:100%;
+    // object-fit: cover;
+}
